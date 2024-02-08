@@ -1,6 +1,6 @@
 <?php
 
-namespace Sajadsdi\MarketplaceTest\Http\Controllers\API\V1;
+namespace Sajadsdi\Marketplace\Http\Controllers\API\V1;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
