@@ -1,6 +1,6 @@
 <?php
 
-namespace Sajadsdi\MarketplaceTest\Providers;
+namespace Sajadsdi\Marketplace\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

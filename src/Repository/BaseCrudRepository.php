@@ -1,6 +1,6 @@
 <?php
 
-namespace Sajadsdi\MarketplaceTest\Repository;
+namespace Sajadsdi\Marketplace\Repository;
 
 use Sajadsdi\LaravelRepository\Concerns\Crud\Crud;
 use Sajadsdi\LaravelRepository\Repository;
