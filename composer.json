@@ -1,22 +1,25 @@
 {
-    "name": "sajadsdi/marketplace-test",
+    "name": "sajadsdi/marketplace",
     "description": "A package that simplifies creating streamlined marketplaces with Laravel",
     "type": "project",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Sajadsdi\\MarketplaceTest\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "SajaD SaeeDi",
             "email": "thunder11like@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Sajadsdi\\Marketplace\\": "src/",
+            "Sajadsdi\\Marketplace\\Factories\\": "database/factories/",
+            "Sajadsdi\\Marketplace\\Seeders\\": "database/seeders/"
+        }
+    },
     "require": {
         "php": "^8.1",
         "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.3",
         "sajadsdi/laravel-dynamic-router": "^1.0",
         "sajadsdi/laravel-repository": "^1.0",
         "sajadsdi/laravel-rest-response": "^1.0"
@@ -24,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sajadsdi\\MarketplaceTest\\Providers\\MarketplaceServiceProvider"
+                "Sajadsdi\\Marketplace\\Providers\\MarketplaceServiceProvider"
             ]
         }
     }
