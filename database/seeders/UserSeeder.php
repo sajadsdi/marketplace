@@ -3,6 +3,7 @@
 namespace Sajadsdi\Marketplace\Seeders;
 
 use Illuminate\Database\Seeder;
+use Sajadsdi\Marketplace\Model\User\User;
 
 class UserSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        User::factory()->count(10)->create();
     }
 }
