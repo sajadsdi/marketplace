@@ -22,7 +22,8 @@
         "laravel/sanctum": "^3.3",
         "sajadsdi/laravel-dynamic-router": "^1.0",
         "sajadsdi/laravel-repository": "^1.0",
-        "sajadsdi/laravel-rest-response": "^1.0"
+        "sajadsdi/laravel-rest-response": "^1.0",
+        "intervention/image": "^3.3"
     },
     "extra": {
         "laravel": {
