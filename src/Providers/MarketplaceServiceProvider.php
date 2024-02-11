@@ -81,7 +81,7 @@ class MarketplaceServiceProvider extends ServiceProvider
 
     private function viewPublishing()
     {
-        $this->publishes([__DIR__ . '/../../resources/views' => resource_path('resources/views'),], 'marketplace-view');
+        $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views'),], 'marketplace-view');
     }
 
     private function routePublishing()
