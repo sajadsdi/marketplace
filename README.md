@@ -3,6 +3,7 @@
 This package simplifies the process of creating streamlined marketplaces with Laravel, offering easy installation and setup.
 
 ## Installation
+First install Laravel and complete the initial setup.
 
 To install the package, run the following command in your Laravel project:
 
