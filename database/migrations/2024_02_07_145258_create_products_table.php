@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('title', 300)->index();
             $table->decimal('price', 12, 2)->unsigned()->index();
             $table->decimal('shipping_price', 8, 2)->unsigned()->index();
-            $table->decimal('total_price')->unsigned()->index();
+            $table->decimal('total_price', 12, 2)->unsigned()->index();
             $table->softDeletes();
             $table->timestamps();
         });

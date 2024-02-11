@@ -3,10 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Sajadsdi\MarketplaceTest\Enums\Order\OrderStatus;
+use Sajadsdi\Marketplace\Enums\Order\OrderStatus;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -16,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId("user_id")->constrained("users")->onDelete("cascade")->onUpdate("cascade");
             $table->decimal('total_price', 12, 2)->unsigned()->index();
-            $table->string('status')->default(OrderStatus::Pending->value);
+            $table->string('status')->default(OrderStatus::Pending->value)->index();
+            $table->boolean('shipping')->default(false)->index();
             $table->softDeletes();
             $table->timestamps();
         });

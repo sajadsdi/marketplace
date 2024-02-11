@@ -16,9 +16,8 @@ return new class extends Migration
             $table->foreignId('order_id')->constrained()->onDelete('cascade')->onUpdate("cascade");
             $table->foreignId('product_id')->constrained()->onDelete('cascade')->onUpdate("cascade");
             $table->integer('quantity')->unsigned();
-            $table->decimal('price', 12, 2)->unsigned()->index();
-            $table->decimal('shipping_price', 8, 2)->default(0)->unsigned()->index();
-            $table->decimal('total_price',12,2)->unsigned()->index();
+            $table->decimal('price', 12, 2)->unsigned();
+            $table->decimal('shipping_price', 8, 2)->default(0)->unsigned();
             $table->softDeletes();
             $table->timestamps();
         });
