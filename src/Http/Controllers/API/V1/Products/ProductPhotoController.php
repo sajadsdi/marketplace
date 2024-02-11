@@ -44,7 +44,7 @@ class ProductPhotoController extends BaseApiController
         if ($request->user()->can('update-product', $product)) {
             //resize image before save
             $imageManager = new ImageManager(new Driver());
-            $image        = $imageManager->read($request->file('photo'))->scale(config('marketplace.product_photo_height'));
+            $image        = $imageManager->read($request->file('photo'))->scale(config('marketplace.product_photo_width'));
 
             $disk = config('marketplace.upload_disk');
 

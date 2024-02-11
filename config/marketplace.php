@@ -4,7 +4,7 @@ return [
     //for sending new order email
     'admin_email' => "admin@test.com",
     //for resize uploaded images for product
-    'product_photo_height' => 500,
+    'product_photo_width' => 500,
     //destination disk for uploads
     'upload_disk' => 'public',
 
