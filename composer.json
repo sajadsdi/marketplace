@@ -1,7 +1,7 @@
 {
     "name": "sajadsdi/marketplace",
     "description": "A package that simplifies creating streamlined marketplaces with Laravel",
-    "type": "project",
+    "type": "laravel-package",
     "license": "MIT",
     "authors": [
         {
