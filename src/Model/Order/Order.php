@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Sajadsdi\Marketplace\Enums\Order\OrderStatus;
-use Sajadsdi\Marketplace\Jobs\SendOrderSubmittedEmail;
 use Sajadsdi\Marketplace\Model\Product\Product;
 use Sajadsdi\Marketplace\Model\User\User;
 
@@ -42,14 +41,5 @@ class Order extends Model
         return $this->belongsToMany(Product::class, 'order_product')
             ->withPivot('quantity', 'price', 'shipping_price')
             ->withTimestamps();
-    }
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::created(function ($order) {
-            SendOrderSubmittedEmail::dispatch($order->id);
-        });
     }
 }
