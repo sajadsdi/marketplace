@@ -11,9 +11,9 @@ class ProductPhoto extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['product_id','path','disk'];
+    protected $fillable = ['product_id', 'path', 'disk'];
 
-    protected $appends  = ["url"];
+    protected $appends = ["url"];
 
     /**
      * relation to product model

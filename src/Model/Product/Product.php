@@ -15,7 +15,7 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['user_id', 'title', 'price', 'shipping_price','total_price'];
+    protected $fillable = ['user_id', 'title', 'price', 'shipping_price', 'total_price'];
 
     /**
      * relation to user model
@@ -35,7 +35,7 @@ class Product extends Model
     public function orders(): BelongsToMany
     {
         return $this->belongsToMany(Order::class, 'order_product')
-            ->withPivot('quantity', 'price', 'shipping_price','total_price')
+            ->withPivot('quantity', 'price', 'shipping_price', 'total_price')
             ->withTimestamps();
     }
 

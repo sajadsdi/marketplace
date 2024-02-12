@@ -13,24 +13,24 @@ return [
         'user'          => \Sajadsdi\Marketplace\Model\User\User::class,
         'product'       => \Sajadsdi\Marketplace\Model\Product\Product::class,
         'product_photo' => \Sajadsdi\Marketplace\Model\Product\ProductPhoto::class,
-        'order'         => \Sajadsdi\Marketplace\Model\Order\Order::class
+        'order'         => \Sajadsdi\Marketplace\Model\Order\Order::class,
     ],
     'policies' => [
         'delete-product' => [
             \Sajadsdi\Marketplace\Policies\GeneralPolicy::class,
-            'delete'
+            'delete',
         ],
         'delete-product-photo' => [
             \Sajadsdi\Marketplace\Policies\GeneralPolicy::class,
-            'delete'
+            'delete',
         ],
         'update-product' => [
             \Sajadsdi\Marketplace\Policies\GeneralPolicy::class,
-            'update'
+            'update',
         ],
         'view-order' => [
             \Sajadsdi\Marketplace\Policies\GeneralPolicy::class,
-            'view'
-        ]
-    ]
+            'view',
+        ],
+    ],
 ];
