@@ -7,15 +7,16 @@
 </head>
 <body>
 <h1>Order Details</h1>
-<p><strong>Custommer Name:</strong> {{ $order->user->name }}</p>
+<p><strong>Customer Name:</strong> {{ $order->user->name }}</p>
+<p><strong>Customer Mail:</strong> {{ $order->user->email }}</p>
 <p><strong>Order ID:</strong> {{ $order->id }}</p>
-<p><strong>Order Shipping:</strong> {{ $order->shipping }}</p>
+<p><strong>Order Shipping:</strong> {{ $order->shipping ? 'yes' : 'no' }}</p>
 <p><strong>Order Items:</strong></p>
 <ul>
     @foreach ($order->products as $product)
-        <li>{{ $product['name'] }} - Number: {{ $product['quantity'] }}</li>
+        <li>{{ $product->title }} x {{ $product->pivot->quantity }} : {{ number_format($product->pivot->price * $product->pivot->quantity + $product->pivot->shipping_price) }}</li>
     @endforeach
 </ul>
-<p><strong>Order Total Price: </strong> {{ $order->total_price }}</p>
+<p><strong>Order Total Price: </strong> {{ number_format($order->total_price) }}</p>
 </body>
 </html>
