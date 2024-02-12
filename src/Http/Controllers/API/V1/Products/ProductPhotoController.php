@@ -37,7 +37,7 @@ class ProductPhotoController extends BaseApiController
     {
         $product = $productRepository->findById($productId);
 
-        if (!$product) {
+        if (! $product) {
             return $this->notFoundResponse();
         }
 
@@ -48,7 +48,7 @@ class ProductPhotoController extends BaseApiController
 
             $disk = config('marketplace.upload_disk');
 
-            if (!Storage::disk($disk)->exists('product_photos')) {
+            if (! Storage::disk($disk)->exists('product_photos')) {
                 Storage::disk($disk)->makeDirectory('product_photos');
             }
 
@@ -68,9 +68,9 @@ class ProductPhotoController extends BaseApiController
     public function destroy($productId, $id, Request $request, ProductRepositoryInterface $productRepository): Response|ResponseFactory
     {
         $product = $productRepository->findById($productId);
-        $photo = $this->repository->findById($id);
+        $photo   = $this->repository->findById($id);
 
-        if (!$product || !$photo) {
+        if (! $product || ! $photo) {
             return $this->notFoundResponse();
         }
 

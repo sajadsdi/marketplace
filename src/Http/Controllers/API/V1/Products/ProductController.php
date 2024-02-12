@@ -50,7 +50,7 @@ class ProductController extends BaseApiController
     {
         $product = $this->repository->findById($id);
 
-        if (!$product) {
+        if (! $product) {
             return $this->notFoundResponse();
         }
 
@@ -64,11 +64,11 @@ class ProductController extends BaseApiController
     /**
      * Remove the specified resource.
      */
-    public function destroy($id , Request $request): Response|ResponseFactory
+    public function destroy($id, Request $request): Response|ResponseFactory
     {
         $product = $this->repository->findById($id);
 
-        if (!$product) {
+        if (! $product) {
             return $this->notFoundResponse();
         }
 

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+PHP_CS_FIXER="vendor/bin/php-cs-fixer"
+
+PHP_CS_FIXER_CONFIG="scripts/php-cs-fixer.php"
+
+if [ -f "$PHP_CS_FIXER" ]; then
+    echo "Running PHP CS Fixer..."
+    $PHP_CS_FIXER fix --config=$PHP_CS_FIXER_CONFIG --using-cache=no
+else
+    echo "PHP CS Fixer not found, please install it using Composer."
+fi

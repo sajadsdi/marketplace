@@ -54,7 +54,7 @@ class OrderController extends BaseApiController
     {
         $order = $this->repository->findById($id);
 
-        if (!$order) {
+        if (! $order) {
             return $this->notFoundResponse();
         }
 

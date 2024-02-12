@@ -17,7 +17,6 @@ class ProductPhotoCreateRequest extends BaseRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
      */
     public function rules(): array
     {

@@ -18,7 +18,6 @@ use Sajadsdi\Marketplace\Repository\Product\ProductRepository;
 use Sajadsdi\Marketplace\Repository\Order\OrderRepository;
 use Sajadsdi\Marketplace\Repository\User\UserRepository;
 
-
 class MarketplaceServiceProvider extends ServiceProvider
 {
 
@@ -58,7 +57,7 @@ class MarketplaceServiceProvider extends ServiceProvider
             'auth.guards.api' => [
                 'driver'   => 'sanctum',
                 'provider' => 'users',
-            ]
+            ],
         ]);
     }
 
@@ -81,12 +80,12 @@ class MarketplaceServiceProvider extends ServiceProvider
 
     private function viewPublishing()
     {
-        $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views'),], 'marketplace-view');
+        $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views')], 'marketplace-view');
     }
 
     private function routePublishing()
     {
-        $this->publishes([__DIR__ . '/../../routes' => base_path('routes'),], 'marketplace-route');
+        $this->publishes([__DIR__ . '/../../routes' => base_path('routes')], 'marketplace-route');
     }
 
     private function configurePublishing()

@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'auth'     => [
+    'auth' => [
         'request_uri'  => 'auth',
         'request_type' => 'get',
         'middleware'   => [],
         'controller'   => \Sajadsdi\Marketplace\Http\Controllers\API\V1\Auth\AuthController::class,
         'method'       => 'user',
         'routes'       => [
-            'login'    => [
+            'login' => [
                 'request_uri'        => 'login',
                 'request_type'       => 'post',
                 'middleware'         => 'guest.api:sanctum',
@@ -22,12 +22,12 @@ return [
                 'without_middleware' => 'auth.api:sanctum',
                 'method'             => 'register',
             ],
-            'logout'   => [
+            'logout' => [
                 'request_uri'  => 'logout',
                 'request_type' => 'post',
                 'method'       => 'logout',
-            ]
-        ]
+            ],
+        ],
     ],
     'products' => [
         'request_uri'  => 'products',
@@ -52,7 +52,7 @@ return [
                         'request_type' => 'delete',
                         'method'       => 'destroy',
                     ],
-                ]
+                ],
             ],
             'create' => [
                 'request_uri'  => '',
@@ -73,10 +73,10 @@ return [
                 'request_uri'  => '{id}',
                 'request_type' => 'delete',
                 'method'       => 'destroy',
-            ]
-        ]
+            ],
+        ],
     ],
-    'orders'   => [
+    'orders' => [
         'request_uri'  => 'orders',
         'request_type' => 'get',
         'middleware'   => [],
@@ -93,6 +93,6 @@ return [
                 'request_type' => 'get',
                 'method'       => 'single',
             ],
-        ]
-    ]
+        ],
+    ],
 ];

@@ -31,7 +31,7 @@ class AuthController extends BaseApiController
                     'authorization' => [
                         'token' => $token,
                         'type'  => 'bearer',
-                    ]
+                    ],
                 ]);
             }
         }
@@ -70,7 +70,7 @@ class AuthController extends BaseApiController
             'authorization' => [
                 'token' => $token,
                 'type'  => 'bearer',
-            ]
+            ],
         ]);
     }
 
@@ -81,6 +81,6 @@ class AuthController extends BaseApiController
     {
         $request->user()->currentAccessToken()->delete();
 
-        return $this->response([],'Successfully logged out');
+        return $this->response([], 'Successfully logged out');
     }
 }

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Sajadsdi\LaravelRestResponse\Concerns\RestResponse;
 
-
 class Authenticated
 {
     use RestResponse;
@@ -24,7 +23,7 @@ class Authenticated
         $guards = empty($guards) ? [] : $guards;
 
         foreach ($guards as $guard) {
-            if (!Auth::guard($guard)->check()) {
+            if (! Auth::guard($guard)->check()) {
                 return $this->unauthorizedResponse();
             }
         }

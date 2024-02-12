@@ -52,7 +52,7 @@ class OrderRepository extends BaseCrudRepository implements OrderRepositoryInter
             'user_id'     => $data['user_id'],
             'shipping'    => $data['shipping'],
             'total_price' => $totalPrice,
-            'status'      => OrderStatus::Processing
+            'status'      => OrderStatus::Processing,
         ]);
 
         $this->updateOrderProducts($order, $data['products']);
@@ -85,7 +85,7 @@ class OrderRepository extends BaseCrudRepository implements OrderRepositoryInter
             $pivotData[$product['id']] = [
                 'quantity'       => $product['quantity'],
                 'price'          => $product['price'],
-                'shipping_price' => $order->shipping ? $product['shipping_price'] : 0
+                'shipping_price' => $order->shipping ? $product['shipping_price'] : 0,
             ];
         }
 
