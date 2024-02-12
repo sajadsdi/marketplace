@@ -4,6 +4,7 @@ namespace Sajadsdi\Marketplace\Repository\Order;
 
 use Illuminate\Database\Eloquent\Model;
 use Sajadsdi\Marketplace\Enums\Order\OrderStatus;
+use Sajadsdi\Marketplace\Jobs\SendOrderSubmittedEmail;
 use Sajadsdi\Marketplace\Repository\BaseCrudRepository;
 
 class OrderRepository extends BaseCrudRepository implements OrderRepositoryInterface
@@ -55,6 +56,8 @@ class OrderRepository extends BaseCrudRepository implements OrderRepositoryInter
         ]);
 
         $this->updateOrderProducts($order, $data['products']);
+
+        SendOrderSubmittedEmail::dispatch($order->id);
 
         return $order->toArray();
     }

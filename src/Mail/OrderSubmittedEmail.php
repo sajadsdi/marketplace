@@ -36,7 +36,7 @@ class OrderSubmittedEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.orders.submitted',
+            view: 'emails.orders.submitted',
             with: [
                 'order' => $this->orderDetails,
             ],
