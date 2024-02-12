@@ -25,6 +25,9 @@
         "sajadsdi/laravel-rest-response": "^1.0",
         "intervention/image": "^3.3"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.49"
+    },
     "extra": {
         "laravel": {
             "providers": [
